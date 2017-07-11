@@ -1,0 +1,632 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{anyt/global/}
+    \entry{Brooks2000}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=4c4cb01dde22ea61d178cdb6157e00d9}{%
+           family={Brooks},
+           family_i={B\bibinitperiod},
+           given={Christopher\bibnamedelima H.},
+           given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{uniquename=0,hash=c919d5f961035c160b814f77ca6d1c2f}{%
+           family={Durfee},
+           family_i={D\bibinitperiod},
+           given={Edmund\bibnamedelima H.},
+           given_i={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{uniquename=0,hash=ba0aa7f010a9be947133598baf875c7b}{%
+           family={Das},
+           family_i={D\bibinitperiod},
+           given={Rajarshi},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{9efa668ffe9b9842a68a3d690eaa5142}
+      \strng{fullhash}{9efa668ffe9b9842a68a3d690eaa5142}
+      \field{labelalpha}{BDD00}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1581132727}
+      \field{journaltitle}{Proceedings of the 2nd ACM conference on Electronic commerce - EC '00}
+      \field{title}{{Price wars and niche discovery in an information economy}}
+      \field{year}{2000}
+      \field{pages}{95\bibrangedash 106}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1145/352871.352882
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/ec00{\_}niche.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=352871.352882
+      \endverb
+    \endentry
+    \entry{Bichler2016}{unpublished}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=c5ea1029719080369a6a5151e48cc146}{%
+           family={Bichler},
+           family_i={B\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=980e3f4f841b75bade1188f5a78a4e38}{%
+           family={Gretschko},
+           family_i={G\bibinitperiod},
+           given={Vitali},
+           given_i={V\bibinitperiod}}}%
+        {{uniquename=0,hash=5d39173187ff160a4c272779f26cf545}{%
+           family={Janssen},
+           family_i={J\bibinitperiod},
+           given={Maarten},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d39d8a5a4354b557a96a9376472a9663}
+      \strng{fullhash}{d39d8a5a4354b557a96a9376472a9663}
+      \field{labelalpha}{BGJ16}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Bargaining in Spectrum Auctions: A Review of the German Auction in 2015}}
+      \field{year}{2016}
+    \endentry
+    \entry{BichlerLecture2016}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c5ea1029719080369a6a5151e48cc146}{%
+           family={Bichler},
+           family_i={B\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Munich}%
+      }
+      \list{publisher}{1}{%
+        {Technical University Munich}%
+      }
+      \strng{namehash}{c5ea1029719080369a6a5151e48cc146}
+      \strng{fullhash}{c5ea1029719080369a6a5151e48cc146}
+      \field{labelalpha}{Bic16}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Simultaneous Multi-Round Auction Format}}
+      \field{year}{2016}
+      \field{pages}{99\bibrangedash 110}
+      \range{pages}{12}
+    \endentry
+    \entry{Bundesnetzagentur2015}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f14c047a6d7b5ab04859ac05104798dc}{%
+           family={Bundesnetzagentur},
+           family_i={B\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Bundesnetzagentur}%
+      }
+      \strng{namehash}{f14c047a6d7b5ab04859ac05104798dc}
+      \strng{fullhash}{f14c047a6d7b5ab04859ac05104798dc}
+      \field{labelalpha}{Bun15}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Entscheidung der Präsidentenkammer der Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen vom 28. Januar 2015 zur Anordnung und Wahl des Verfahrens sowie über die Festlegungen und Regeln im Einzelnen (Vergaberegeln) und über }}
+      \field{volume}{1}
+      \field{year}{2015}
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/EntscheidungProjekt2016{\_}pdf.pdf:pdf
+      \endverb
+      \keyw{icle}
+    \endentry
+    \entry{Cramton2002}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=51cf52a29aa564c6bc2c32916faf3060}{%
+           family={Cramton},
+           family_i={C\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{51cf52a29aa564c6bc2c32916faf3060}
+      \strng{fullhash}{51cf52a29aa564c6bc2c32916faf3060}
+      \field{labelalpha}{Cra02}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Auctions have emerged as the primary means of assigning spectrum licenses to companies wishing to provide wireless communication services. Since July 1994, the Federal Communications Commussion (FCC) has conducted 33 spectrum auctions, assigning thousands of licenses to hundreds of firms. Countries throughout the world are conducting similar auctions. I review the current state of spectrum auctions. Both the design and performance of these auctions are addressed.}
+      \field{isbn}{978-1-4419-6110-5}
+      \field{journaltitle}{Handbook of Telecommunications Economics}
+      \field{title}{{Spectrum Auctions}}
+      \field{year}{2002}
+      \field{pages}{605\bibrangedash 639}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1007/978-1-4419-6111-2
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/01hte-spectrum-auctions.pdf:pdf
+      \endverb
+      \keyw{auctions,multiple-item auctions,spectrum auctions,telecommunications}
+    \endentry
+    \entry{Cramton2006}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=51cf52a29aa564c6bc2c32916faf3060}{%
+           family={Cramton},
+           family_i={C\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+        {{uniquename=0,hash=774e2e16526f33f383bed004b13bf326}{%
+           family={Shoham},
+           family_i={S\bibinitperiod},
+           given={Yoav},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=17c408d292558f2c32f64f9142657bef}{%
+           family={Steinberg},
+           family_i={S\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{320ae2b738957759c2ae6a3f66115210}
+      \strng{fullhash}{320ae2b738957759c2ae6a3f66115210}
+      \field{labelalpha}{CSS06}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A comprehensive book on combinatorial auctions―auctions in which bidders can bid on packages of items. The book consists of original material intended for researchers, students, and practitioners of auction design. It includes a foreword by Vernon Smith, an introduction to combinatorial auctions, and twenty-three cross-referenced chapters in five parts. Part I covers mechanisms, such as the Vickrey auction and the ascending proxy auction. Part II is on bidding and efficiency issues. Part III examines computational issues and algorithmic considerations, especially the winner determination problem―how to identify the (tentative) winning set of bids that maximizes revenue. Part IV discusses implementation and methods of testing the performance of combinatorial auctions, including simulation and experiment. Part V considers four important applications: airport runway access, trucking, bus routes, and industrial procurement. The chapters develop and apply a unified language, integrating ideas from economics, operations research, and computer science. A glossary defines the central terms. The contributors are Lawrence Ausubel, Michael Ball, Martin Bichler, Sushil Bikhchandani, Craig Boutilier, Estelle Cantillon, Chris Caplice, Peter Cramton, Andrew Davenport, George Donohue, Karla Hoffman, Gail Hohner, Jayant Kalagnanam, Ailsa Land, Daniel Lehmann, Kevin Leyton-Brown, Dinesh Menon, Paul Milgrom, Rudolf Müller, Noam Nisan, Eugene Nudelman, Joseph Ostroy, David Parkes, Aleksandar Pekec, Martin Pesendorfer, Susan Powell, Amir Ronen, Michael Rothkopf, Tuomas Sandholm, Ilya Segal, Yossi Sheffi, Yoav Shoham, Richard Steinberg, Susara van den Heever, Thomas Wilson, and Makoto Yokoo.}
+      \field{isbn}{9780262033428}
+      \field{journaltitle}{MIT Press}
+      \field{title}{{Combinatorial auctions}}
+      \field{year}{2006}
+      \field{pages}{1179}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.7551/mitpress/9780262033428.001.0001
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/cramton-shoham-steinberg-combinatorial-auctions.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://works.bepress.com/cramton/35/
+      \endverb
+    \endentry
+    \entry{FranceSealed2015}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f0e43b1edda8b2c1877bbfecaa30efec}{%
+           family={FierceWireless},
+           family_i={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {http://www.fiercewireless.com/node/23291}%
+      }
+      \strng{namehash}{f0e43b1edda8b2c1877bbfecaa30efec}
+      \strng{fullhash}{f0e43b1edda8b2c1877bbfecaa30efec}
+      \field{labelalpha}{Fie15}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015}
+      \field{title}{{France raises EUR 2.8B from 700 MHz spectrum auction}}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.fiercewireless.com/node/23291
+      \endverb
+    \endentry
+    \entry{Goeree2010}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=2a977cb33de6d5de76b5e11ff17702e5}{%
+           family={Goeree},
+           family_i={G\bibinitperiod},
+           given={Jacob\bibnamedelima K.},
+           given_i={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=0c10f07a6ad6b6b74173f0d27ae545b9}{%
+           family={Holt},
+           family_i={H\bibinitperiod},
+           given={Charles\bibnamedelima A.},
+           given_i={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{45fa1eb6604aa2593265cf64ddc132ac}
+      \strng{fullhash}{45fa1eb6604aa2593265cf64ddc132ac}
+      \field{labelalpha}{GH10}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce a new combinatorial auction format based on a simple, transparent pricing mechanism tailored for the hierarchical package structure proposed by Rothkopf, Peke??, and Harstad to avoid computational complexity [Rothkopf, M., Peke??, A., Harstad, R., 1998, Computationally manageable combinatorial auctions. Manage. Sci. 44, 1131-1147]. This combination provides the feedback necessary for bidders in multi-round auctions to discern winning bidding strategies for subsequent rounds and to coordinate responses to aggressive package bids. The resulting mechanism is compared to two leading alternatives in a series of laboratory experiments involving varying degrees of value synergies. Based on these "wind tunnel" tests the FCC has decided to use hierarchical package bidding in a segment of the upcoming 700 MHz auction. ?? 2008 Elsevier Inc.}
+      \field{isbn}{0899-8256}
+      \field{issn}{08998256}
+      \field{journaltitle}{Games and Economic Behavior}
+      \field{number}{1}
+      \field{title}{{Hierarchical package bidding: A paper {\&} pencil combinatorial auction}}
+      \field{volume}{70}
+      \field{year}{2010}
+      \field{pages}{146\bibrangedash 169}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1016/j.geb.2008.02.013
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/HPB.pdf:pdf
+      \endverb
+      \keyw{Experiments,FCC spectrum auctions,Package bidding}
+    \endentry
+    \entry{FCCCanada}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=222f10e65f7573f072efdee061dca0c3}{%
+           family={Innovation},
+           family_i={I\bibinitperiod},
+           given={Science},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=c4bdc9237ea7b11c76dccffe799fc19b}{%
+           family={Canada},
+           family_i={C\bibinitperiod},
+           given={Economic\bibnamedelima Development},
+           given_i={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {http://www.ic.gc.ca/eic/site/smt-gst.nsf/eng/sf10730.html{\#}aD}%
+      }
+      \strng{namehash}{8c85c5fdb52bad1048a460bfe2c90909}
+      \strng{fullhash}{8c85c5fdb52bad1048a460bfe2c90909}
+      \field{labelalpha}{IC14}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{[Online; accessed 13-09-2016]}
+      \field{title}{{Licensing Framework for Broadband Radio Service (BRS) - 2500 MHz Band}}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://www.ic.gc.ca/eic/site/smt-gst.nsf/eng/sf10730.html%7B%5C#%7DaD
+      \endverb
+    \endentry
+    \entry{Levin2004}{unpublished}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9a4a8fdc33ee020f980cb5d48c800300}{%
+           family={Levin},
+           family_i={L\bibinitperiod},
+           given={Jonathan},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{9a4a8fdc33ee020f980cb5d48c800300}
+      \strng{fullhash}{9a4a8fdc33ee020f980cb5d48c800300}
+      \field{labelalpha}{Lev04}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Lectore Notes. Unpublished manuscript}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{1587200740}
+      \field{issn}{0949-1775}
+      \field{title}{{Auction Theory}}
+      \field{year}{2004}
+      \verb{doi}
+      \verb 10.1007/s007690000247
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1011.1669v3
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Auctions.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://web.stanford.edu/%7B~%7Djdlevin/Econ%20286/Auctions.pdf
+      \endverb
+    \endentry
+    \entry{Levin2009}{unpublished}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9a4a8fdc33ee020f980cb5d48c800300}{%
+           family={Levin},
+           family_i={L\bibinitperiod},
+           given={Jonathan},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University, Lecture Slides}%
+      }
+      \strng{namehash}{9a4a8fdc33ee020f980cb5d48c800300}
+      \strng{fullhash}{9a4a8fdc33ee020f980cb5d48c800300}
+      \field{labelalpha}{Lev09}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Simultaneous Ascending Auctions}
+      \field{number}{February}
+      \field{title}{{Simultaneous Ascending Auctions}}
+      \field{year}{2009}
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/SAA and Spectrum Sales.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://web.stanford.edu/%7B~%7Djdlevin/Econ%20285/SAA%20and%20Spectrum%20Sales.pdf
+      \endverb
+    \endentry
+    \entry{Milgrom2000}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=34f1001c25af4e44faf38d1b7d91227b}{%
+           family={Milgrom},
+           family_i={M\bibinitperiod},
+           given={Paul\bibnamedelima Robert},
+           given_i={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{34f1001c25af4e44faf38d1b7d91227b}
+      \strng{fullhash}{34f1001c25af4e44faf38d1b7d91227b}
+      \field{labelalpha}{Mil00}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Providing a comprehensive introduction to modern auction theory and its important new applications, this book is written by a leading economic theorist whose suggestions guided the creation of the new spectrum auction designs. Aimed at graduate students and professionals in economics, the volume provides the most up-to-date analysis of traditional theories of "optimal auctions" as well as newer theories of multi-unit auctions and package auctions, and shows by example how these theories are used. It explores the limitations of prominent older designs, such as the Vickrey auction design, and evaluates the practical responses to those limitations. Paul Milgrom is the Leonard and Shirley Ely Professor of Humanities and Sciences and Professor of Economics, Stanford University. He is the author of more than sixty articles and co-author of the influential textbook, Economics, Organization and Management (Prentice Hall, 1992). Professor Milgrom is a pioneer in the economic theory of auctions and co-designer of the simultaneous, multiple round auction that the FCC adopted for selling radio spectrum licenses.Visit the author's website for instructor resources.}
+      \field{booktitle}{Journal of Political Economy}
+      \field{isbn}{0521536723}
+      \field{issn}{0899-8256, 0899-8256}
+      \field{number}{2}
+      \field{title}{{Putting Auction Theory to Work}}
+      \field{volume}{108}
+      \field{year}{2000}
+      \field{pages}{245\bibrangedash 272}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1086/262118
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Putting Auction Theory to Work - Paul Milgrom.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://books.google.com/books?id=AkeHTU7XW4kC%7B%5C&%7Dpgis=1
+      \endverb
+    \endentry
+    \entry{Menezes2005}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=920861366f0fde0155e3c4572afc4832}{%
+           family={Menezes},
+           family_i={M\bibinitperiod},
+           given={Flavio\bibnamedelima M.},
+           given_i={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=080685484040701006bbb06700e1034b}{%
+           family={Monteiro},
+           family_i={M\bibinitperiod},
+           given={Paulo\bibnamedelima K.},
+           given_i={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{be3c6bfad4547dc6fb48c888326f8874}
+      \strng{fullhash}{be3c6bfad4547dc6fb48c888326f8874}
+      \field{labelalpha}{MM05}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book presents an in-depth discussion of the auction theory. It introduces the concept of Bayesian Nash equilibrium and the idea of studying auctions as games. Private, common, and affiliated values models and multi-object auction models are described. A general version of the Revenue Equivalence Theorem is derived and the optimal auction is characterized to relate the field of mechanism design to auction theory}
+      \field{isbn}{9780191602214}
+      \field{journaltitle}{An Introduction to Auction Theory}
+      \field{title}{{An Introduction to Auction Theory}}
+      \field{year}{2005}
+      \field{pages}{1\bibrangedash 224}
+      \range{pages}{224}
+      \verb{doi}
+      \verb 10.1093/019927598X.001.0001
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Menezes {\&} Monteiro - An Introduction to Auction Theory.pdf:pdf
+      \endverb
+      \keyw{Affiliated values model,Auction theory,Bayesian nash equilibrium,Common values model,Multiple objects,Private values model,Revenue equivalence theorem}
+    \endentry
+    \entry{Nisan2007}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=dd03ed102537d5040adaf7ede9bad0ec}{%
+           family={Nisan},
+           family_i={N\bibinitperiod},
+           given={Noam},
+           given_i={N\bibinitperiod}}}%
+        {{uniquename=0,hash=efce6f6d496cdcc1bb07fb47dfecb3aa}{%
+           family={Roughgarden},
+           family_i={R\bibinitperiod},
+           given={Tim},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=608e9f169a2a7ade461d3123a30073c8}{%
+           family={Taros},
+           family_i={T\bibinitperiod},
+           given={Éva},
+           given_i={É\bibinitperiod}}}%
+        {{uniquename=0,hash=4344f3ab9820abfa99b0160d5d229257}{%
+           family={Vazirani},
+           family_i={V\bibinitperiod},
+           given={Vijay\bibnamedelima V},
+           given_i={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, New York, Melbourne, Madrid, Cape Town, Singapore, Sao Paulo, Delhi}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{64758af82dc05676ad8db1c0bb1c8290}
+      \strng{fullhash}{64758af82dc05676ad8db1c0bb1c8290}
+      \field{labelalpha}{Nis+07}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Xtemp-01}
+      \field{title}{{Algorithmic Game Theory}}
+      \field{year}{2007}
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Nisan{\_}Non-printable.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Rothkopf1998}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=b26e98af1d4e0ff25de62dc7824120b4}{%
+           family={Rothkopf},
+           family_i={R\bibinitperiod},
+           given={Michael\bibnamedelima H.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{uniquename=0,hash=16c41f890dc63b5a88ab484887dc4e11}{%
+           family={Pekeč},
+           family_i={P\bibinitperiod},
+           given={Aleksandar},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=825fe45e9b1a7422d2915607d3d3da5c}{%
+           family={Harstad},
+           family_i={H\bibinitperiod},
+           given={Ronald\bibnamedelima M.},
+           given_i={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{adf9be8d719b23047dc987715ec87da6}
+      \strng{fullhash}{adf9be8d719b23047dc987715ec87da6}
+      \field{labelalpha}{RPH98}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management science}
+      \field{title}{{Computitional Manageable Combinatitional Auction}}
+      \field{volume}{44}
+      \field{year}{1998}
+      \field{pages}{1131\bibrangedash 1147}
+      \range{pages}{17}
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Computationally{\_}Manageable{\_}Combinatorial{\_}Auctions.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Leyton-Brown2008}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=774e2e16526f33f383bed004b13bf326}{%
+           family={Shoham},
+           family_i={S\bibinitperiod},
+           given={Yoav},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=91d47c0d6ebf96d50082140932162381}{%
+           family={Leyton-Brown},
+           family_i={L\bibinithyphendelim B\bibinitperiod},
+           given={Kevin},
+           given_i={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8425ae9eea5ffe62c10cc31270be58e}
+      \strng{fullhash}{a8425ae9eea5ffe62c10cc31270be58e}
+      \field{labelalpha}{SL10}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Multiagent systems consist of multiple autonomous entities having different information and/or diverging interests. This comprehensive introduction to the field offers a computer science perspective, but also draws on ideas from game theory, economics, operations research, logic, philosophy and linguistics. It will serve as a reference for researchers in each of these fields, and be used as a text for advanced undergraduate and graduate courses. Emphasizing foundations, the authors offer a broad and rigorous treatment of their subject, with thorough presentations of distributed problem solving, non-cooperative game theory, multiagent communication and learning, social choice, mechanism design, auctions, coalitional game theory, and logical theories of knowledge, belief, and other aspects of rational agency. For each topic, basic concepts are introduced, examples are given, proofs of key results are offered, and algorithmic considerations are examined. An appendix covers background material in probability theory, classical logic, Markov decision processes, and mathematical programming.}
+      \field{isbn}{978-0-262-01889-0}
+      \field{issn}{00796611}
+      \field{title}{{Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations.}}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1073/pnas.97.18.9840
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/mas.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://books.google.com/books?hl=en%7B%5C&%7Dlr=%7B%5C&%7Did=bMR%7B%5C_%7DqScakukC%7B%5C&%7Doi=fnd%7B%5C&%7Dpg=PP16%7B%5C&%7Ddq=Algorithmic,+Game-Theoretic,+and+Logical+Foundations%7B%5C&%7Dots=3Bp9h59NwL%7B%5C&%7Dsig=h9O7n1BWTb2KD-xwioKPezk5XMc
+      \endverb
+      \keyw{algorithms,auctions,communication,competition,cooperation,distributed problem solving,game theory,learning,logic,mechani,mechanism design,social choice}
+    \endentry
+    \entry{Vickrey1961}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=ae3c60d8c94ccf50c57a46630c2c42e1}{%
+           family={Vickrey},
+           family_i={V\bibinitperiod},
+           given={William},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae3c60d8c94ccf50c57a46630c2c42e1}
+      \strng{fullhash}{ae3c60d8c94ccf50c57a46630c2c42e1}
+      \field{labelalpha}{Vic61}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Finance}
+      \field{number}{1}
+      \field{title}{{Counterspeculation, Auctions, and Competitive Sealed Tenders}}
+      \field{volume}{16}
+      \field{year}{1961}
+      \field{pages}{8\bibrangedash 37}
+      \range{pages}{30}
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Vickrey61.pdf:pdf
+      \endverb
+      \verb{url}
+      \verb http://robotics.eecs.berkeley.edu/%7B~%7Dwlr/228aF04/Vickrey61.pdf
+      \endverb
+    \endentry
+    \entry{Wellman2008}{article}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=efdd8ebed1ab6d158e6d7192a7327723}{%
+           family={Wellman},
+           family_i={W\bibinitperiod},
+           given={Michael\bibnamedelima P},
+           given_i={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{uniquename=0,hash=2b941806a9fcb1ef6b2f085322e1253f}{%
+           family={Osepayshvili},
+           family_i={O\bibinitperiod},
+           given={Anna},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=e4fa1c13a8468c755d5c4da8b1800b9c}{%
+           family={MacKie-Mason},
+           family_i={M\bibinithyphendelim M\bibinitperiod},
+           given={Jeffrey\bibnamedelima K},
+           given_i={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=49755a39acf7576af5d70165a3fe939c}{%
+           family={Reeves},
+           family_i={R\bibinitperiod},
+           given={Daniel},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{162993e9c138ab0ce1c9d66bdbae9989}
+      \strng{fullhash}{162993e9c138ab0ce1c9d66bdbae9989}
+      \field{labelalpha}{Wel+08}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Simultaneous ascending auctions present agents with various strategic problems, depending on preference structure. As long as bids represent non-repudiable offers, submitting non-contingent bids to separate auctions entails an exposure problem: bidding to acquire a bundle risks the possibility of obtaining an undesired subset of the goods. With multiple goods (or units of a homogeneous good) bidders also need to account for their own effects on prices. Auction theory does not provide analytic solutions for optimal bidding strategies in the face of these problems. We present a new family of decision-theoretic bidding strategies that use probabilistic predictions of final prices: self-confirming distribution-prediction strategies. Bidding based on these is provably not optimal in general. But evidence using empirical game-theoretic methods we developed indicates the strategy is quite effective compared to other known methods when preferences exhibit complementarities. When preferences exhibit substitutability, simpler demand-reduction strategies address the own price effect problem more directly and perform better. [PUBLICATION ABSTRACT]}
+      \field{issn}{1534598X}
+      \field{journaltitle}{The B.E. Journal of Theoretical Economics}
+      \field{number}{1}
+      \field{title}{{Bidding Strategies for Simultaneous Ascending Auctions}}
+      \field{volume}{8}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.2202/1935-1704.1461
+      \endverb
+      \verb{file}
+      \verb :C$\backslash$:/Users/Tim/OneDrive/01{\_}Studium/01{\_}BSc Wirtschaftsinformatik/08{\_}Semester/01{\_}BSc Thesis/smra-hpb-berger.doc/references/Bidding{\_}Strategies{\_}SAA.pdf:pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

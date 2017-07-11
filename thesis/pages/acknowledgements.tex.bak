@@ -1,0 +1,16 @@
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\thispagestyle{empty}
+
+\vspace*{20mm}
+
+\begin{center}
+{\usekomafont{section} Acknowledgments}
+\end{center}
+
+\vspace{10mm}
+
+%TODO: Acknowledgments
+I would like to thank Mr. Andor Goetzendorff for his constant support while working on this project. Also I would like to thank Mr. Felix Schober for always reminding me what true friendship looks like.
+Lastly, I want to thank food (in general), as it always manages to comfort me in hard times.
+
+\cleardoublepage{}

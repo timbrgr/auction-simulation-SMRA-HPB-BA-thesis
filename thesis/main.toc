@@ -1,0 +1,107 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgments}{iv}{Doc-Start}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abstract}{v}{chapter*.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Zusammenfassung}{vi}{chapter*.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}The German Spectrum Auction in 2015}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Contribution}{3}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Thesis Outline}{4}{section.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Auction Theory}{5}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}What is an Auction?}{5}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline The Independent Private Value (IPV) model.}{5}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Common Value Auctions.}{6}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Bayesian Nash Equilibrium.}{6}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Sealed Bid Auction - First Price Auction}{7}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Vickrey Auction - Second Price Auction}{7}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}SAA - Simultaneous Ascending Auctions}{8}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Characteristics.}{8}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Conclusion and discussion.}{8}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}The Exposure Problem}{9}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline A simple example.}{9}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}What is the Advantage of Round Based Auctions?}{10}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Auction Formats used in Spectrum Auctions}{10}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}SMRA - Simultaneous Multi-Round Auction}{11}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Characteristics.}{11}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Conclusion and discussion.}{12}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}HPB - Hierarchical Package Bidding}{12}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline The HPB idea.}{13}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline The mathematical formulation.}{13}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline Summary and discussion.}{15}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}Other Auction Formats}{15}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Experimental Design}{17}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Data from the German Spectrum Auction 2015}{17}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Data Aquisition}{17}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Data Analysis}{18}{subsection.3.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Spectrum specific Information}{21}{subsection.3.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Value Model}{22}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Methodology of Evaluation}{26}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Simulation}{28}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Structure of the Project}{28}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}The Simulation Process}{30}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Auction Set-Up}{30}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Strategy and Selector Model}{32}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Results}{34}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Efficiency of the Formats}{35}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}Revenue of the Formats}{36}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline The influence of bonus valuations and hierarchies.}{36}{figure.caption.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{\nonumberline The competition environment.}{36}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}Summary of the Results}{38}{subsection.4.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusions and Future Work}{41}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{43}{chapter*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline List of Tables}{44}{chapter*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.39}

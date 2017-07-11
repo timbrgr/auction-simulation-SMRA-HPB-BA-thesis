@@ -1,0 +1,53 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {american}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces Amount of MHz sold in the German auction\relax }}{3}{figure.caption.4}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 2.1}{\ignorespaces Example of an HPB Hierarchy for spectrum auctions\relax }}{13}{figure.caption.14}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Example of the available bidding data\relax }}{18}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces The OCR process\relax }}{19}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.3}{\ignorespaces Block winner per round\relax }}{20}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 3.4}{\ignorespaces Development of mean bids per spectrum over time, bids in thousand EUR\relax }}{21}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Structure of the simulation implementation\relax }}{29}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces HPB Hierarchy "Competition", packages with bonus in red\relax }}{31}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces HPB Hierarchy "VM Prediction", packages with bonus in red\relax }}{32}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Sensitivity of efficiency against $ \beta _{900} = \beta _{1800} $ in $ H_{competition} $\relax }}{35}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Sensitivity of efficiency against $ \beta _{900} = \beta _{1800} $ in $ H_{vm-prediction} $\relax }}{35}{figure.caption.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Sensitivity of revenue against $ \beta _{900} = \beta _{1800} $ in $ H_{competition} $\relax }}{37}{figure.caption.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Sensitivity of revenue against $ \beta _{900} = \beta _{1800} $ in $ H_{vm-prediction} $\relax }}{37}{figure.caption.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.8}{\ignorespaces Competition environment of HPB with $ H_{competition} \text { \& } [rev \sim s_{DT}, s_{VOD}] $\relax }}{38}{figure.caption.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.9}{\ignorespaces Competition environment of HPB vs. SMRA $ [rev_{HPB} - rev_{VOD} \sim s_{DT}, s_{VOD}] $\relax }}{40}{figure.caption.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.10}{\ignorespaces Sensitivity of revenue against bidder strength $ [s_{DT} = s_{VOD}] $\relax }}{40}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 4.11}{\ignorespaces Sensitivity of revenue with one stronger bidder $ [s_{TEF} = s_{DT} = 1] $\relax }}{40}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }

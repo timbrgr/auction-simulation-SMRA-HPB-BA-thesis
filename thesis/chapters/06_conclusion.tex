@@ -1,0 +1,27 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Conclusions and Future Work}\label{chapter:conclusion}
+The purpose of this thesis is to research the impact of using HPB instead of SMRA on efficiency and revenue in big spectrum auctions by running simulations based on the German Auction from 2015. A value model was developed to describe the valuations of the participating bidders, as well as a selector model that incorporated the characteristics of the German Auction like spectrum caps and super-additive item bundling. Also, the selector was extended to support package bidding behaviour of the agents and two different HPB hierarchies featuring a competitive and less competitive structure were developed.
+
+Simulations were run on different parameter settings on the bonuses valuations for the super-additive item packages and bidder strengths for the two different HPB hierarchy structures,  comparing the results to the SMRA format. The analysis indicates that when choosing an appropriate package structure, HPB might help finding more efficient overall allocations during the auction, but due to the signalling properties of the package bids it might reduce overall revenue. HPB showed to be more stable in relation to different super-additive valuations than SMRA, indicating that it might be a useful tool in auctions that have those characteristics. When using less competitive package structures, the established SMRA showed to be superior in creating higher revenues. The response of revenue to different competition environment seems to be very similar in HPB and SMRA.
+
+Still, HPB is an auction format that is simple to implement and facilitates signalling desired item combinations. With a pre-defined package structure it reduces the need for computationally expensive combinatorial calculations and substitutes it for a simple "tax system" that hands down price increases on packages to the item level. This makes price calculations understandable in comparison to the often intricate price calculations in combinatorial auctions.
+
+To further investigate the eligibility of using HPB in big spectrum auctions more research needs to be done. In particular, the impact of the pre-defined item packages and to what extent it might help with bidder collusion. The research showed that more competitive hierarchies might lead to more efficient auctions and less competitive hierarchies can negatively impact revenue. To evaluate if this is an inherent property of HPB, more experiments with a broad spectrum of different hierarchies need to be run to ascertain if this is only an artifact of the modelling done in this thesis. If this verifies, choosing the right HPB hierarchy has big implications on the auctions run.
+
+Also, the simulations were run based on the value model developed in this thesis. Further work can be put into constructing a more complex model that also takes into account the six item bundle in the 1800 MHz as stated in \cite{Bichler2016} as well as incorporating the 1500 MHz frequency band, which was left out due to lack of importance, because as of writing of this thesis no 
+devices that can utilize this frequency band exist. Also, the prices yielded in the auction were very low in comparison to the other bands.
+
+Additionally, subsequent research needs to be done to show the effect of HPB on the exposure of bidders. This work excluded exposure by technically allowing bidders to bid over multiples of an item's valuation, which would not be feasible in real auctions. Analysing the impact would have been out of the scope of this thesis and is strongly recommended as the focus for future research on this topic. 
+
+
+% BACKUP
+%Findings HPB:
+%- might help coordination between bidders (even though revenue might be lower than), but probably only with fitting HPB hierarchy
+%
+%Future work:
+%- further develop value model -  stated the 6 bundle package n 1800 MHz which was left out in this thesis as the sensitivy anslysi would bhave been out of the scope of this thesis
+%- include exposure
+%- research to what extent competitive and less competitive structures impact revenue (hält das weiterhin bestand) or is this just an artefact of the modelling from this thesis. If yes, choosing the right structure would have high implications on the outcome of an auction
+%- find out if competitive hierachies really results in more efficient allocation all the time

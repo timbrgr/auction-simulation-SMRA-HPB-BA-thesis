@@ -1,0 +1,159 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+\graphicspath{{./figures/ch2/}}
+
+\chapter{Auction Theory}\label{chapter:theory}
+In this chapter I will establish a basis of auction theory developed by academia. At first I will describe what an auction is and introduce basic auction formats like the First Price and Second Price Auction. Afterwards I will describe the exposure problem. To get an understanding of the auction formats used in the simulation (see \autoref{chapter:simulation}) I will introduce the Simultaneous Multi-Round Auction (SMRA) and Hierarchical Package Bidding (HPB). %TODO abbreviations
+
+
+\section{What is an Auction?}
+Auctions have become a well-established tool for answering a fundamental question in markets: "Who gets what to which price?". Having themselves proven as an effective tool to sell goods and implement public policies, auctions are now being used in a wide variety of settings, from effectively allocating radio spectrum to mobile network operators, trading electricity and pollution permits, governmental procurement and many more. Auction theory has been studied by academia for decades mostly by economists. With the rise of new auction types like combinatorial formats, where bidders can place bids on packages of items, auction theory became increasingly an interdisciplinary field of economics, operation research and computer science.
+
+Auctions are concerned with an allocation problem, meaning which bidder gets a good at what price. They are micro-foundations of markets, that try to answer this question \cite{Cramton2006}. %TODO
+
+\paragraph{The Independent Private Value (IPV) model.}
+Auctions can be defined using different perspectives, e. g. a game theoretic, a contract and mechanism design theory or market microstructure approach. For the following formulations, I will use the game theoretic perspective. A basic auction environment comprises of the following characteristics (based on \cite[p. 1]{Levin2004}):
+
+\begin{itemize}
+	\item A number of bidders $ i = 1,...,n $
+	\item the object to be auctioned, called \textit{item}
+	\item the signal $ S_i $ observed by bidder $ i $ with a realization $ s_i \in [\bar{s}, \underbar{s}] $
+	\item independence of bidder's signals $ S_1, ..., S_n $
+	\item Bidder \textit{i} has a valuation function $ v_i(s_i) = s_i $
+\end{itemize}
+The IPV\footnote{The simulation in this thesis will be based on the IPV.} can be extended to fit the needs for combinatorial auctions, where not only one item, but $ m $ indivisible items are simultaneously being auctioned among the $ n $ bidders \cite[p. 267]{Nisan2007}. Also, the valuation function now maps from a subset $ S $ of the $ m $ items to their valuation  $ v(S) \to \mathbb{R} $, which the bidder $ i $ obtains upon winning this specific bundle of items and where the valuation function is monotone and "normalized", meaning $ v(\emptyset) = 0 $ \cite[p. 268]{Nisan2007}. 
+This formulation is necessary as the valuation of these subsets does not necessarily equal the sum of its containing items. Furthermore, two types of subsets can be defined, where subsets S and T with $ S \cap T = \emptyset $ are called \textit{complements} if $ v(S \cup T) > v(S) + v(T) $ (also called \textit{super-additive}) and \textit{substitutes} if $ v(S \cup T) < v(S) + v(T) $  \cite[p. 268]{Nisan2007}. Assuming the non-existence of \textit{externalities}, meaning the bidder's valuation is not dependent on the allocation of items to other bidders, the \textit{utility} or \textit{payoff} $ \pi_i $ of bidder $ i $ can be described as $ \pi_i = v_i(S) - p $, where $ p $ is the price for the current subset $ S$ \cite[p. 268]{Nisan2007}.
+
+The mapping of items to bidders is called \textit{allocation} and is written $ S_1, ..., S_n $ with $ S_i \cap S_j = \emptyset $ for every $ i \neq j $. Summing all valuations over the allocation  $ \sum_i v_i(S_i) $ is called \textit{social welfare}. One goal of an auction can be to maximize this metric in its equilibrium. \cite[p. 268]{Nisan2007}.
+
+\paragraph{Common Value Auctions.}
+Item valuations do not have to be bound by its private valuation, but can also be influenced by the overall allocation of the items. In those cases, bidder $ i $ can learn about bidder $ j $'s information and might be forced to re-evaluate its valuation for the object \cite[p. 8]{Levin2004}. Therefore, the signals and information from bidder $ i $ and $ j $ are dependent. Examples for auctions incorporating this behaviour can be initial public offerings or spectrum auctions. In \textit{common value auctions}, the signals from other bidders influence a bidder's valuation by $ v_i(s_i, s_{-i}) $. Note, that the IPV is a special case of this formulation with $ v_i(s_i, s_{-i}) = s_i $, where the signals $ S_1,..., S_n $ are independent \cite[p. 8]{Levin2004}.
+
+\paragraph{Bayesian Nash Equilibrium.}
+Often, auctions are described by the equilibria they create, meaning the "convergence" of strategies used by the bidders that is induced by the auction format. If a bidder would know every strategy its competitors were following, he could easily deduce a payoff-maximizing action, which is called \textit{best response}. Let $ s = (s_i, s_{-i}) $ be the \textit{strategy profile} of the game, where $ s_i $ is bidder's $ i $ strategy and $ s_{-i} $  the strategies of its competitors. Bidder's $ i $ best response $ s_i^* $ to the strategy profile of its competitors $ s_{-i} $ is a mixed strategy $ s_i^* \in S_i $ where $ \pi_i (s_i^*, s_{-i}) \geq \pi_i (s_i, s_{-i}) \quad \forall s_i \in S_i $ \cite[p. 62]{Leyton-Brown2008}. When considering all the bidder's strategies, the strategy profile $ s = (s_1, ..., s_n) $ is a \textit{Nash equilibrium} if for all agents $ i $, $ s_i $ is the best response to their competitors' strategies $ s_{-i} $ \cite[p. 62]{Leyton-Brown2008}. Therefore, the Nash equilibrium describes the \textit{stable} balance between the different bidder's strategies, where no bidder wants to change his strategy if he knew the strategies its competitors.
+The \textit{Bayesian Nash equilibrium} takes into account the assumption a bidder makes about the strategies of its competitors. With $ I = \{1, 2, ..., n\} $ being the set of players, $ X_i $ the set of possible types of agent $ i \in I $ and $ F(\cdot) $ the probability distribution over the set $ X = X_1 \times X_2 \times ... \times X_n $ each player can choose a strategy $ s_i \in S_i $ where $ s_i: X_i \to S_i $ \cite[p. 6 f.]{Menezes2005}. The \textit{Bayesian Nash equilibrium} concerning the best responses $ s_1^*, ..., s_n^*$ and $ \forall i \in I, \forall x_i \in X $ and $ \forall s_i \in S_i $ can then be described as
+
+$$ \int_{x_{-i} \in X_{_i}} \pi_i(s_i^*, s_{-i}^*, x_i, x_{-i}) d\hat{F_i}(x_{-i}|x_i) \geq \int_{x_{-i} \in X_{_i}} \pi_i(s_i, s_{-i}^*, x_i, x_{-i}) d\hat{F_i}(x_{-i}|x_i)  $$
+		
+where $ \hat{F_i}(x_{-i}|x_i) $ describes probability distribution over agent $ i $'s competitors' types, given that agent $ i $ knows his own type $ x_i $. The agent continuously updates his prior information on the distribution using Bayes rule, when he learned that his type is $ x_i $ \cite[p. 6 f.]{Menezes2005}.
+
+\subsection{Sealed Bid Auction - First Price Auction}
+The sealed bid or first price auction is easy to imagine. Each bidder places sealed bids $ b_1, ..., b_n $ and the bidder with the highest bid wins, \textit{paying the amount he bid}. Because of the nature of this rule, bidders have an incentive to not bid their true valuation of the object, because this would result in $ \pi_i = v(s_i) -b_i = 0 $ \cite[p. 3]{Levin2004}. To circumvent that, bidders might bid below their actual valuation to potentially increase their profit. Interestingly, it can be shown that the equilibrium for the sealed-bid first price auction with $ n $ bidders can be described as $$ b(v(s_i)) = \Big( \dfrac{n - 1}{n} \Big) v(s_i)   $$ e. g. in a sealed bid auction with two bidders, each bidder would bid half its valuation of the object \cite{Vickrey1961}.
+
+\subsection{Vickrey Auction - Second Price Auction}
+The Vickrey auction is a special case of the sealed bid auction, where bidders submit sealed bids $ b_1,...b_n $ and the bidder with the highest bids wins, but only \textit{pays the amount of the second highest bid}. It can be shown, that in equilibrium, each bidder will bid its valuation of the object $ b_i(s_i) = s_i $ \cite[p. 2]{Levin2004}. 
+The Nash equilibria of the Vickrey auction and the open English auction are the same. When auctioning items in an open and ascending (English) manner, the equilibrium will settle at the second highest valuation \cite[p. 2]{Levin2004}. With the item prices rising from zero upwards, bidders can drop out of the auction when they reached their valuation of the object. The winner will have to pay the amount of the second highest valuation as its bidder will have dropped out as the price reached its valuation, making it the last bidder in the auction.
+
+\section{SAA - Simultaneous Ascending Auctions}
+In contrast to the normal English auction, were one item is sold at the same time using an ascending price system, spectrum auctions sell many goods. When selling items sequentially, bidders' available information and responding possibilities are limited and thus bidders might risk missing the opportunity to buy items at low prices early or even being forced to buy them at a much higher prices later on. Also they might fail to bundle desired packages of items together, which would be more valuable to them. Bidders are forced to make good predictions about the outcome of the auction and bid accordingly. Most times this leads to less efficient auctions, meaning less frequently bidders achieve to acquire the items or item combinations they value the most \cite[p. 185]{Cramton2006}.
+
+\paragraph{Characteristics.}
+To reduce the amount of exposure bidders will be subjected to, simultaneous ascending auctions were introduced. In this format, many items are sold, were each item can be bid on simultaneously. Bidders can not submit bids on packages of items, but have to place bids on single objects. Like in an English auction, prices rise with each valid bid placed until the auction is finished, e.g. when each bidder stopped raising bids or when times runs out. 
+If certain item combination are complementarities, meaning their combination has super-additive valuation, bidders in SAA tend to suffer from bidder exposure \cite[p. 209]{Cramton2006}. To mitigate this effect, withdrawal of standing bids can be implemented, that enables bidders to back out of failed item aggregations.
+
+\paragraph{Conclusion and discussion.}
+SAA are a well established format used in high-stake auctions like spectrum, energy or pollution permit auctions. With mild complementarities, SAA yield in competitive equilibria, that also hold stand in practical usage \cite[p. 209]{Cramton2006}. While SAA manage to successfully combine auctioning of multiple items with simple mechanism design, SAA can incentivise bidders to expose themselves in order to achieve certain item combinations when complementarities exist. In those environments, package bids should be used to increase efficiency of the auction\cite[p. 185]{Cramton2006}. Also, revenue-reducing strategies and bidder collusion can occur in markets with weak competition, as well as bid-signalling to cooperatively split items between competing bidders \cite[p. 187., p. 209]{Cramton2006}.
+
+
+\section{The Exposure Problem}\label{subsection:exposure-problem}
+During an auction with many offered items, bidders often try to acquire certain item combinations, because those packages of items might have super-additive valuation, meaning their package valuation is higher than the sum of the valuation of each item. In the field of spectrum auctions these might be a specific number of blocks obtained in a certain frequency band that enables better technology, e.g. LTE instead of GSM, or the clustering of adjacent geographical regions that allows a bidder to provide service for a bigger market while reducing costs by optimally placing transmission towers in the regions.
+When auction formats only allow bidders to place bids on single items, not packages of items, they run into the risk of failing to achieve the desired item combination. In order to acquire those bundles, bidders might have to bid above the valuation of a particular item but might not be able to acquire the remaining items in the bundle. This is called the exposure problem.
+
+
+\paragraph{A simple example.} A bidder tries to acquire the synergistic combination of items $ A $ and $ B $. The bidder's valuation for each single item is $ v(A) = v(B) = 10 $, but when combining both, let's say because it enables the bidder to use more cost-effective technology, the valuation of both items together is $ v(AB) = 40 $, so twice the summed valuation of the single items. 
+
+Now, let's consider the following situation: The current prices are $ p(A) = 9 $ and $ p(B) = 14 $. Normally, the bidder would set its bid for item A with $ bid(A, B) = (10, 0) $, thus excluding item B from its bid, because the current price already exceeds the bidder's internal valuation of the item. However, because the sum of both prices are still less than the combined valuation of the items, hence, the bidder has an incentive to also bid on B. For the sake of the argument, our bidder now placed its bid with $ bid(A, B) = (10, 15) $, the auction finished, but a competitor achieved to acquire item A with a higher price. Now, our bidder bought item B with $ p(B) = 15 $ and let's remember that the single item internal valuation of item B was $ v(B) = 10 $. Instead of gaining a surplus through obtaining one of the auctioned items, our bidder now made a loss (example based on \cite{Levin2009}).
+
+In auctions with many items and thus a high number of item combinations it is hard to keep track of the dependencies. Academia tackles the exposure problem by researching new auction formats or mechanisms that try to mitigate the exposure subjected to the bidders. One mechanism is the possibility to retract bids like they are offered in implementations of the SMRA %TODO abbr
+(see \autoref{subsection:smra_theory}), where "failed bids", e.g. bids that failed to aggregate a desired item combination, can be withdrawn to free up budget, which the bidder can then focus on other valuation maximizing bids. This is a well establish mechanism, even though according to Cramton, this can lead to "undesirable gaming behavior" within the auction and has to be constrained to effectively control such behaviour \cite{Cramton2006}.
+Other efforts strive to reduce exposure of bidders by enabling them to bid on (pre-)defined packages, like the HPB format (more on that in \autoref{subsection:hpb_theory}). 
+
+\section{What is the Advantage of Round Based Auctions?}
+In standard auction models, like in sealed bid auctions, it is assumed that each bidder knows its valuation for each possible package a priori \cite{Cramton2006}. In fact, determining valuation is a costly process, because it can depend on information of other bidders and especially when a high number of items are involved, create a solution space of combinatorial magnitude. 
+
+Round based auctions try to mitigate this problem as each round, bidding information is released and bidders can identify target licenses more easily \cite{Levin2009}. The extent of the information range depends on the model and its implementation, but exemplary might contain price information like the highest winning bid and all bids placed by competitors. With the newly revealed information at hand, bidder's uncertainty is reduced so that they can set their future bids more aggressively and can focus on the valuation maximazing parts of the item space, which improves efficieny according to Cramton \cite{Cramton2006}. Over time, bidders increasingly get an understanding of what the overall allocation and prices at the end of the auction might look like and can bid according to this judgement.
+
+Using this advantage, round based formats were used in national spectrum auctions in the U.S. (and later on in Europe) since 1994 when it was proposed to the U.S. Federal Communication Commission by Milgrom, Wilsen and McAfee.
+
+\section{Auction Formats used in Spectrum Auctions}
+Even though the success of simultaneous ascending auction formats in national spectrum auctions led to a widespread use of formats like the SMRA, %TODO abbr
+a number of other formats were used in recent times or new formats were proposed by academia. In the following section I will describe the auction processes and rules for the Simultaneous Multi-Round Auction (SMRA). %TODO abbr
+and the Hierarchical Package Bidding Auction (HBP). Both formats will be compared in the simulation (see \autoref{chapter:simulation}). %TODO abbr
+ 
+\subsection{SMRA - Simultaneous Multi-Round Auction}\label{subsection:smra_theory}
+The Simultaneous Multi-Round Auction (SMRA) is most commonly used auction format used for selling spectrum world wide. Since its development in the early 90's for the US Federal Communications Commission its usage has become wide spread, making it the de facto standard. Its success stems from the fact, that it often leads to good allocations \cite{BichlerLecture2016}, but it suffers from strategic challenges for bidder when used in an environment where complementarities exist.
+
+\paragraph{Characteristics.}
+The SMRA extends the SAA, by adding a round based system. Multiple items are auctioned at the same time - in contrast to the English auction - in a round based fashion, where each round has a time limit in which bidders can place bids.  When a round is finished, bidding data is published that contains the \textit{current} winner of each item, which corresponds with the highest bid placed on each item \cite{BichlerLecture2016}. The degree of transparency provided by the auctioneer depends on the implementation, e.g. the German auction in 2015 provided very high transparency by showing all bids placed by each participant \cite{Bundesnetzagentur2015}. Often, only highest bid submitted is published.
+In each round, bidders have to exceed the provisional prices of the previous round by a pre-defined \textit{increment} if they wish to claim the item. In the German auction, bidders could submit bids using a \textit{clickbox} system, which offered pre-defined multiples of the current increment. The increment can change over time, depending on the current \textit{phase} of the auction. The auction ends, when no new bids are being submitted. Each bidders than acquire the items where he possesses the highest active bid and pays the prices accordingly. 
+
+To incentivise bidding right from the start, SMRA makes use of \textit{activity rules}. This is often realised by \textit{eligibility points (EP)} that corresponds to a bidder's bidding extent. Each bidder starts with a pre-defined number of EP - often comprising of the maximum number of licenses allowed to bid on - and each item can be matched to a certain number of EP necessary to bid on them. If the EP from the items won in the previous round and the bids submitted in the new round are less than the current \textit{activity level}, a bidder's EP gets deducted by the amount it "under-bid". An example for an activity level can be 65\% of the starting EP, as used in the German auction in the first bidding phase. From then on, the activity level subsequently rose to 80\% and 100\% \cite[p. 15]{Bundesnetzagentur2015}.
+Additionally, auctioneers using SMRA can use a wide range of tools to influence the outcome of the auction. These can include:
+\begin{itemize}
+	\item \textit{minimum prices} for the items
+	\item \textit{bid increments} and how their value changes over the course of the auction
+	\item \textit{bid withdrawals} and \textit{waivers}, which allow the bidder to either withdraw a bid submitted in a previous round or to suspend himself from bidding for a round (without consequences)
+	\item \textit{bidding floors} and \textit{caps} which regulate how many items a bidders is allowed to obtain in a specific frequency band to prevent monopolies or businesses to drop out of the market due to insufficient supply.
+\end{itemize}
+
+\paragraph{Conclusion and discussion.}
+The SMRA is an easy to implement auction format which clear and simple rules which often realises efficient allocations. In environments where complementarities exist (such as synergetic values between items), the SMRA fails to resolve at a Walrasian equilibrium \cite{BichlerLecture2016}. Due to its lack of package bidding, bidders might be incentivised to expose themselves in order to acquire certain item combinations, making the exposure problem a central challenge in SMRA strategies. The activity rules have shown to be fairly similar world wide, but the degree of transparency differs widely, as well as the rules in procurement, which have impact on the performance of the auction. Nevertheless, the SMRA is a well established and frequently used format for spectrum auctions and other common value auctions. 
+
+\subsection{HPB - Hierarchical Package Bidding}\label{subsection:hpb_theory}
+While the Hierarchical Package Bidding Auction (HPB) has never been used in a national spectrum auction before, this thesis will run simulations using this format to explore indicators of its eligibility as basis for further research. The implementation used in this thesis is based on the propositions of \citeauthor{Goeree2010} from 2007.
+
+The paper hypothesised that HPB might help mitigating the exposure problem (see \autoref{subsection:exposure-problem}) by pre-packaging bidding items into bundles inside a tree like hierarchy structure. This allows bidders to bid on packages, signalling a desired allocation. By that, the bidder can bid on a certain package until its valuation, without the need to possibly strategically bid over the valuation of single items in that package. In the end, the bidder either manages to acquire every item in the package and combining them to realise super-additive valuation or does not win any of the items. Of course, bidders are still able to bid on single items. 
+
+Combinatorial auctions try to solve the problem by allowing bidders to bid on any desired item combinations. Determining the provisional allocation after each round shows to be an intricate and computationally expensive problem in the magnitude of \textit{NP-hard} \cite{Goeree2010}, meaning non-deterministic polynomial-time hard, because the number of possible arrangements growth exponentially with the number of objects. Thus, it is not guaranteed to find the optimal solution within a reasonable amount of time and mostly the best current solution yielded within a pre-defined time frame will be chosen. This approach is problematic as price calculations seem non-transparent and even experts claim the ability to rig auctions based on this computational downside  \cite{Goeree2010}.
+
+\paragraph{The HPB idea.} \citeauthor{Rothkopf1998} proposed a hierarchical pre-packaging of items to avoid the issues of computational expensiveness of combinational auctions in 1998 \cite{Rothkopf1998}. The work of \citeauthor{Goeree2010} was based on this proposition and extended it by developing a recursive pricing formula for combinatorial auctions using the pre-defined hierarchies. The basic idea of the pricing formula is that prices for single items would be increased by \textit{"lump-sum taxes"} handed down from packages in the higher hierarchy levels. In the case a package bid is winning, the excess prices will be proportionally propagated down towards the single item level of the hierarchy. The goal is to create a transparent and computationally inexpensive way to calculate the prices.
+
+\begin{figure}[h]
+	\centering
+	\input{./figures/ch2/hpb_hierarchy_example.tikz}
+	\caption{Example of an HPB Hierarchy for spectrum auctions}
+	\label{fig:hpb-hierarchy-example}
+\end{figure}
+
+\paragraph{The mathematical formulation.}
+An example for a HPB hierarchy can be seen in \autoref{fig:hpb-hierarchy-example}, which subsequently unites items to regional and finally a nation wide package. Formulated in \cite{Goeree2010}, a hierarchy has $ H \geq 1 $ hierarchy levels which are subsequently labeled $ h = 1, ..., H $ and each level $h$ contains $ I_h $ packages. The single items can be found as leaves in the tree in $ h = 1 $, from there the package grow bottom up. Packages in level $ h $ are written as $ P_{i_h}^h \text{ for } i_h = 1,..., I_h $. Each of the packages consists of $ \alpha_{i_h}^h $ bidding items and the number of packages in a level falls while propagating upward in the hierarchy. As an important note, all packages in a hierarchy are non-overlapping, meaning $ \forall \text{ level-h packages } P_{i_h}^h \neq P_{i_h}^h \implies P_{i_h}^h \cap P_{i_h}^h = \emptyset $. Therefore, each package is contained in only one package in the following upper level $ h' > h $ and there is only one unique level-$h'$ package $ P_{j_{h'}}^{h'} $ with $ P_{j_{h'}^{h'}} \supset P_{i_h}^h  $. This results in the number of items being contained in a package is the sum of items it covers in level-1.
+\begin{align}
+	\sum_{P_{i_1}^1 \subset P_{i_h}^h} \alpha_{i_1}^1 = \alpha_{i_h}^h
+\end{align}
+Every hierarchy level contains all items from level-1: $ \sum_{i_h = 1}^{I_h} \alpha_{i_h}^h = \alpha \text{ } \forall \text{ h in h } = 1,...,H $ with $ \alpha $ being the
+ total number of \textit{(level-1)} items in the auction.
+After defining the hierarchy and its properties, \citeauthor{Goeree2010} devised two recursive algorithms for calculating the \textit{revenues} $ R(P_{i_h}^h) $ and \textit{prices} $ p(P_{i_1}^1) $.
+
+\textbf{Revenues and the assignment problem:} To assign items to bidders, first the highest bid $ b^{max}(P_{i_h}^h)$ on the packages have to be found. Finding the optimal assignment and revenue can be describes as follows:
+\begin{enumerate}
+	\item Set $ h = 1 $, for this level set revenues to $ R(P_{i_1}^1) = b^{max}(P_{i_1}^1)$ for $ i_1 = 1, ..., I_1 $, those bids are marked as \textit{"provisionally winning"}
+	\item if $ h < H \implies h = h+1$ and continue with step \textit{3}, otherwise \textit{stop}
+	\item if $ b^{max}(P_{i_h}^h) > \sum_{P_{i_{h-1}}^{h-1} \subset P_{i_h}^h} R(P_{i_{h-1}}^{h-1}) \implies R(P_{i_h}^h) = b^{max}(P_{i_h}^h)$ and label $ b^{max}(P_{i_h}^h) $ as \textit{provisionally winning}, bids from all lower levels on packages that overlap with $ P_{i_h}^h $ are unmarked. Otherwise, $ R(P_{i_h}^h) = \sum_{P_{i_{h-1}}^{h-1} \subset P_{i_h}^h}  R(P_{i_{h-1}}^{h-1})$ and \textit{return to step 2}.
+\end{enumerate}
+
+\textbf{Prices:} Now, with the assignment set, the prices have to be updated. They are assigned to the level-1 items in the hierarchy by adding \textit{"lump sum tax"} to the items if the revenue of package is less than the one the next level upwards. With $ p(P_{i_1}^1) $ being the price of level-1 package $ P_{i_1}^1 $:
+\begin{enumerate}
+	\item Set $ h = 1 $ and define prices for all packages in this level as $ p(P_{i_1 }^1) = b^{max}(P_{i_1}^1) $  $\forall i_1 = 1, ..., I_1 $
+	\item if $ h < H  \implies h = h + 1 $ and continue with \textit{step 3}, otherwise \textit{stop}
+	\item For each package $ P_{i_h}^h $ in level-$h$ calculate $$ \tau^h(P_{i_1}^1) = \dfrac{\alpha_{i_1}^1}{\alpha_{i_h}^h} \Big( R(P_{i_h}^h) \quad - \sum_{P_{i_{h-1}}^{h-1} \subset P_{i_h}^h} R(P_{i_{h-1}}^{h-1}) \Big) \geq 0 $$ and add $ \tau^h(P_{i_1}^1) $ to the price $ p(P_{i_1}^1) $ of each level-1 package $ P_{i_1}^1 $ contained in $ P_{i_h}^h $. Return to \textit{step 2}
+\end{enumerate}
+
+In comparison to the calculations needed in other combinatorial auction formats, the computations done in the two formulations above are computationally inexpensive. This is one of the advantages of HPB. \citeauthor{Goeree2010} derived a calculation of the level-1 prices as follows:
+\begin{align}
+	p(P_{i_1}^1) = b^{max}(P_{i_1}^1) + \sum_{P_{i_h}^h \supset P_{i_1}^1} \dfrac{\alpha_{i_1}^1}{\alpha_{i_h}^h} \Big( R(P_{i_h}^h) \quad - \sum_{P_{i_{h-1}}^{h-1} \subset P_{i_h}^h} R(P_{i_{h-1}^{h-1}}) \Big)
+\end{align}
+
+%TODO include simple example?
+
+\paragraph{Summary and discussion.}
+HPB shows to be less computationally expensive as other combinatorial auction formats but maintains the possibility for bidders to bid on \textit{pre-defined} packages within a hierarchy that is built bottom up from the single items upwards. The assignment problem as well as the price calculations can be done using a recursive function, where the number of comparisons needed is only linear in relation to the pre-defined packages \cite{Goeree2010}. 
+
+\citeauthor{Goeree2010} also mention in their paper that the pre-packaging will disadvantage small bidders who also contribute to finding optimal allocations. The impact of this needs to be researched in further studies. Also, \citeauthor{Goeree2010} argue that non-overlapping package structures may not always be able to reflect the interests of the participating bidders. It still needs to be verified to what extent the hierarchy influences auction outcomes. Also, for each auction there might be an array of alternative hierarchies. To choose the appropriate hierarchy seems to be key in using HPB efficiently.
+
+\subsection{Other Auction Formats}
+In spectrum auctions world wide a variety of different auctions formats are used. The reason for that are different performance properties of efficiently allocating items to bidders as well as maximizing revenue or social welfare. 
+For example, Canada used a the combinatorial clock auction (CCA) format to sell the 2500 MHz spectrum in the 2014 . It used an OR-bidding language, where bidders were able to express that they want to acquire a license for a certain price \textit{and / or} a different license for a different price \cite{FCCCanada}. The auction involved a price discovery stage that was similar to the SMRA auction format, but the CCA allowed bidders to submit bids on packages rather than only on single items. This was necessary due to the regional nature of the licenses being auctioned and the complementarities that existed between them \cite{FCCCanada}.
+
+Despite the fact that combinatorial auction allows bidding on packages, it still inherits a lot of issues like non-linear price progressions that makes it hard for bidders to compare prices, as well as computational issues \cite[p. 290]{Nisan2007}, which results in combinatorial auction not being frequently used in spectrum auctions.
+
+In 2015, the French 700 MHz spectrum auction was even conducted in a sealed bid manner \cite{FranceSealed2015}, raising EUR 2.8bn in the process. The sealed bid part in the auction was used to decide where in the spectrum band auctioned blocks should be placed.

@@ -1,0 +1,64 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+
+% TODO: decide if one-sided/two-sided
+%\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+
+% TODO: change citation style in settings
+\input{settings}
+
+% TODO: change thesis information
+\newcommand*{\getUniversity}{Technische Universität München}
+\newcommand*{\getFaculty}{Department of Informatics}
+\newcommand*{\getTitle}{A Comparison of the Impact of Auction Formats Used in the 2015 German Spectrum Auction "Mobiles Breitband - Projekt 2016"}
+\newcommand*{\getTitleGer}{Ein Vergleich des Einflusses von Auktionsformaten in der Spektrumsauktion "Mobiles Breitband - Projekt 2016" in Deutschland"}
+\newcommand*{\getAuthor}{Tim Berger}
+\newcommand*{\getDoctype}{Bachelor's Thesis in Information Systems}
+\newcommand*{\getSupervisor}{Andor Goetzendorff}
+\newcommand*{\getAdvisor}{Prof. Dr. Martin Bichler}
+\newcommand*{\getSubmissionDate}{15.09.2016}
+\newcommand*{\getSubmissionLocation}{Munich}
+
+%\makeglossaries
+%\loadglsentries{pages/glossaries}
+
+%\input{glossary/terms}
+%\input{glossary/acronyms}
+
+\begin{document}
+
+% Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
+% (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
+\pagenumbering{alph}
+\input{pages/cover}
+
+\frontmatter{}
+
+\input{pages/title}
+\input{pages/disclaimer}
+\input{pages/acknowledgements}
+\input{pages/abstract}
+\microtypesetup{protrusion=false}
+\tableofcontents{}
+\microtypesetup{protrusion=true}
+
+\mainmatter{}
+
+\input{chapters/01_introduction}
+%\input{chapters/02_overview}
+\input{chapters/03_theory}
+\input{chapters/04_experimental_design}
+\input{chapters/05_simulation}
+\input{chapters/06_conclusion}
+
+\appendix{}
+
+\microtypesetup{protrusion=false}
+\listoffigures{}
+\listoftables{}
+\microtypesetup{protrusion=true}
+\printbibliography{}
+\microtypesetup{protrusion=false}
+%\input{pages/appendix}
+
+\end{document}

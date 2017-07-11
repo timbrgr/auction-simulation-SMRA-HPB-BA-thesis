@@ -1,0 +1,13 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Introduction}\label{chapter:introduction}
+
+\section{Motivation}
+TODO
+
+\section{Contribution}
+Forschungsfrage, mein Beitrag
+
+\section{Thesis outline}
+This thesis is organized as follows. \autoref{chapter:overview} gives an overview of the market of spectrum auctions and explain the necessity of such auctions, with detail on the German spectrum auction in 2015. The following \autoref{chapter:theory} will introduce important concepts and terminology of auction theory. Subsequently, \autoref{chapter:experiment} explains the data acquisition and analysis that gained insights for production of the value model. \autoref{chapter:simulation} is the heart of this thesis, explaining the simulation process and the results. Lastly, \autoref{chapter:conclusion} draws final conclusions from the simulation data and gives an outlook for future work.

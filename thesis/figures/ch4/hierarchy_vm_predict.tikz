@@ -1,0 +1,27 @@
+\usetikzlibrary{shapes}
+
+\begin{adjustbox}{valign=t}
+	\centering
+	\begin{forest}
+		rounded/.style={ellipse, draw}
+		[{\textbf{700 MHz}}, for tree=rounded
+		[{A, B}
+		[A][B]]
+		[{C, D}
+		[C][D]]
+		[{E, F}
+		[E][F]]]
+	\end{forest}
+\end{adjustbox} \quad
+\begin{adjustbox}{valign=t}
+	\begin{forest}
+		rounded/.style={ellipse, draw}
+		[{\textbf{900 MHz}}, for tree=rounded
+		[{A, B, C}, red
+		[A][B][C]]
+		[{D, E, F}, red
+		[D][E][F]]
+		[{G}
+		[G]]]
+	\end{forest}
+\end{adjustbox}

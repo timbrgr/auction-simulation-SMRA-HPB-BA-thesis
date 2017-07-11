@@ -1,0 +1,12 @@
+\begin{adjustbox}{valign=t}
+	\begin{forest}
+		rounded/.style={ellipse, draw}
+		[{\textbf{1800 MHz}}, for tree=rounded
+		[{A, B, C, D}, red
+		[A][B][C][D]]
+		[{E, F, G, H}, red
+		[E][F][G][H]]
+		[{I, J}
+		[I][J]]]
+	\end{forest}
+\end{adjustbox}

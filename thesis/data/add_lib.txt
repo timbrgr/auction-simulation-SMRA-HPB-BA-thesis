@@ -1,0 +1,6 @@
+@book{krishna2009auction,
+  title={Auction theory},
+  author={Krishna, Vijay},
+  year={2009},
+  publisher={Academic press}
+}

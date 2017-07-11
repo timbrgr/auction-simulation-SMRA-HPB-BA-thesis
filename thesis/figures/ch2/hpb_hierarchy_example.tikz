@@ -1,0 +1,13 @@
+\begin{adjustbox}{valign=t}
+	\begin{forest}
+%		rounded/.style={ellipse, draw}
+		[{nation}
+			[{region A}
+				[{locale $A_1$}][{locale $A_2$}]]
+			[{region B}
+				[{subregion $B_1$}
+				[locale $B_{1,1} $][locale $B_{1,2} $]]
+				[{subregion $B_2$}
+				[locale $B_{2,1} $][locale $B_{2,2} $]]]]
+	\end{forest}
+\end{adjustbox}

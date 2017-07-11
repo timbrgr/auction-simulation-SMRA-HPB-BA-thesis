@@ -1,0 +1,18 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'main.blg'
+[62] biber-MSWIN32:290> INFO - === 
+[253] Biber.pm:351> INFO - Reading 'main.bcf'
+[417] Biber.pm:776> INFO - Found 18 citekeys in bib section 0
+[441] Biber.pm:3493> INFO - Processing section 0
+[663] Biber.pm:3657> INFO - Looking for bibtex format file 'data/library.bib' for section 0
+[706] bibtex.pm:1187> INFO - Decoding LaTeX character macros into UTF-8
+[720] bibtex.pm:1048> INFO - Found BibTeX data source 'data/library.bib'
+[795] Utils.pm:149> WARN - ISBN '0899-8256' in entry 'Goeree2010' is invalid - run biber with '--validate_datamodel' for details.
+[844] Utils.pm:149> WARN - BibTeX subsystem: C:\Users\Tim\AppData\Local\Temp\8YXrttdCu3\library.bib_14152.utf8, line 6, warning: 172 characters of junk seen at toplevel
+[933] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[933] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[933] Biber.pm:3306> INFO - Sorting list 'anyt/global/' of type 'entry' with scheme 'anyt' and locale 'en-US'
+[934] Biber.pm:3310> INFO - No sort tailoring available for locale 'en-US'
+[969] bbl.pm:526> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[976] bbl.pm:619> INFO - Output to main.bbl
+[981] Biber.pm:108> INFO - WARNINGS: 2

@@ -1,0 +1,93 @@
+% !TeX root = ../main.tex
+% Add the above to each chapter to make compiling the PDF easier in some editors.
+
+\chapter{Auction Theory}\label{chapter:theory}
+In this chapter I will establish a sound basis of auction theory established by academia. At first I will describe what an auction is and introduce basic auction formats like the English auction and the simultaneous ascending auction. Afterwards I will describe the exposure problem, where its reduction is one of the main drivers of my thesis. To get an understanding of the auction formats used in the simulation (see \autoref{chapter:simulation}) I will introduce commonly used auction formats in national spectrum auctions, especially the Simultaneous Multi-Round Auction (SMRA) and Hierarchical Package Bidding (HPB). %TODO abbreviations
+
+
+\section{What is an Auction?}
+Auctions have become a well-established tool for answering a fundamental question in markets: "Who gets what to which price?". Having themselves proven as an effective tool to sell goods and implement public policies, auctions are now being used in a wide variety of settings, from effectively allocating radio spectrum to mobile network operators, trading electricity and pollution permits, governmental procurement and much more \cite 
+
+
+Auction theory has been studied by academia for decades mostly by economists. With the rise of new auction types like combinatorial formats, where bidders can place bids on packages of items, auction theory became increasingly an interdisciplinary field of economics, operation research and computer science.
+
+Auctions are concerned with an allocation problem, meaning which bidder gets a good at what price. They are micro-foundations of markets, that try to answer this question \cite{Cramton2006}.
+
+
+TODO
+important terminology
+market
+activity rules
+eligibility points
+
+
+English Auction
+Sealed Bid Auction
+
+\subsection{Sealed Bid Auction - First Price Auction}
+TODO
+
+\subsection{Vrickey Auction - Second Price Auction}
+TODO
+
+
+\section{Simultaneous Ascending Auctions}
+In contrast to the normal English auction, were one item is sold at the same time using an ascending price system, spectrum auctions sell many goods. When selling items sequentially, bidders' available information and responding possibilities are limited and thus might risk missing to buy items at low prices early or being forced to buy them at a much higher prices later on. Also they might fail to bundle desired packages of items together, which would be more valuable to them. Bidders are forced to make good predictions about the outcome of the auction and bid accordingly. Most times this leads to less efficient auctions, meaning less frequently bidders achieve to acquire the items or item combinations they intended to.
+
+To reduce the amount of exposure bidders will be subjected to, simultaneous ascending auctions were introduced. In this format, many items are sold, were each item can be bid on simultaneously. Like in an English auction, prices rise with each valid bid placed until the auction is finished, e.g. when each bidder stopped raising bids or when times runs out.
+
+\textbf{The Auction Design}
+open bidding, simultaneous sale, no package bids
+
+advantages:
+- simplicity in design \cite[p. 15]{Bundesnetzagentur2015}
+
+disadvantages:
+- exposure problem, some scholars argue that simultaneous ascending auctions "[...] do a sufficiently goob job in limiting the exposure problem [...]" \cite{Cramton2006} but the problem still remains. 
+- revenue-reducing strategies in markets where competition is weak, bid-signaling to cooperate a split of items
+
+\section{The Exposure Problem}
+%When does exposure occur?
+During an auction with many items being offered, often bidders try to acquire certain item combinations, because those packages of items might have superadditive valuation, meaning their package valuation is higher than the sum of the valuation of each item. In the field of spectrum auctions these might be a specific number of blocks obtained in a certain frequency band that enables better technology, e.g. LTE instead of GSM, or the clustering of adjacent geographical regions that allows a bidder to provide service for a bigger market while reducing costs by optimally placing transmission towers in the regions.
+When auction formats only allow bidders to place bids on single items, not packages of items, they run into the risk of failing to achieve the desired item combination. In order to acquire those bundles, bidders might have to bid above the valuation of a particular item but might not be able to acquire the remaining items in the bundle. This is called the exposure problem.
+
+
+A simple example. A Bidder tries to acquire tries to acquire the synergistic combination of items $ A $ and $ B $. The bidder's valuation for each single item is $ v(A) = v(B) = 10 $, but when combining both, let's say because it enables the bidder to use more cost-effective technology, the valuation of both items together is $ v(AB) = 40 $, so twice the summed valuation of the single items. 
+
+
+Now, let's consider the following situation: The current prices are $ p(A) = 9 $ and $ p(B) = 14 $. Normally, the bidder would set its bid for item A with $ bid(A, B) = (10, 0) $, thus excluding item B from its bid, because the current price already exceeds the bidder's internal valuation of the item. But, because the sum of both prices are still less than the combined valuation of the items, the bidder has an incentive to bid also on B. For the sake of the argument, our bidder now placed its bid with $ bid(A, B) = (10, 15) $, the auction finished, but a competitor achieved to acquire item A with a higher price. Now, our bidder bought item B with $ p(B) = 15 $ and let's remember that the single item internal valuation of item B was $ v(B) = 10 $. Instead of gaining a surplus through obtaining one of the auctioned items, our bidder now made a loss.
+
+In auctions with many items and thus a high number of item combinations it is hard to keep track of the dependencies. Academia tackles the exposure problem by researching new auction formats or mechanisms that try to mitigate the exposure subjected to the bidders. One mechanism is the possibility to retract bids like they are offered in implementations of the SMRA %TODO abbr
+(see \autoref{subsection:smra_theory}), where "failed bids", e.g. bids that failed to aggregate a desired item combination, can be withdrawn to free up budget that the bidder can focus on other valuation maximizing bids. This is a well establish mechanism, even though according to Cramton, this can lead to "undesirable gaming behavior" within the auction and has to be constrained to effectively control such behaviour \cite{Cramton2006}.
+Other efforts strive to reduce exposure of bidders by enabling them to bid on (pre-)defined packages, like the HPB format (more on that in \autoref{subsection:hpb_theory}). 
+
+\section{What is the advantage of round based auctions?}
+In standard auction models, like in sealed bid auctions, it is assumed that each bidder knows its valuation for each possible package a priori \cite{Cramton2006}. In fact, determining valuation is a costly process, because it can depend on information of other bidders and especially when a high number of items are involved, create a solution space of combinatorial magnitude. 
+
+Round based auctions try to mitigate this problem as each round, bidding information is released. The extent of the information range depends on the model and its implementation, but exemplary might contain price information like the highest winning bid and all bids placed by competitors. With the newly revealed information at hand, bidder's uncertainty is reduced so that they can set their future bids more aggressively and can focus on the valuation maximazing parts of the item space, which improves efficieny according to Cramton \cite{Cramton2006}. Over time, bidders increasingly get an understanding of what the overall allocation and prices at the end of the auction might look like and can bid according to this judgement.
+
+Using this advantage, round based formats were used in national spectrum auctions in the U.S. (and later on in Europe) since 1994 when it was proposed to the U.S. Federal Communication Commission by Milgrom, Wilsen and McAfee.
+
+\section{Auction Formats used in Spectrum Auctions}
+Even though the success of simultaneous ascending auction formats in national spectrum auctions led to a widespread use of formats like the SMRA, %TODO abbr
+a number of other formats were used in recent times or new formats were proposed by academia. In the following section I will describe the auction processes and rules for the Combinatorial Clock Auction (CCA), %TODO abbr
+the Hierarchical Package Bidding Auction (HBP) %TODO abbr
+and the Simultaneous Multi-Round Auction (SMRA). %TODO abbr
+The two latter are of great importance as they will be the auction formats compared in the simulation (see \autoref{chapter:simulation}).
+
+\subsection{CCA - Combinatorial Clock Auction}
+
+\subsection{HPB - Hierarchical Package Bidding Auction}\label{subsection:hpb_theory}
+
+\subsection{SMRA - Simultaneous Multi-Round Auction}\label{subsection:smra_theory}
+
+The SMRA %TODO abbr
+is an extension of the simultaneous ascending auction, where many goods are auctioned at the same time. 
+
+
+%\section{Bidding strategies}
+%rough overview of different strategies
+%cooperation
+%competition
+%jump bidding
+%signaling
